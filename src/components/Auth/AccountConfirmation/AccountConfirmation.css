@@ -1,0 +1,99 @@
+.confirmation-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.confirmation-text {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0.5rem 0;
+}
+
+.check-button {
+  background-color: #00b894;
+  color: #fff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 1.5rem;
+}
+
+.check-button:hover {
+  background-color: #019875;
+  transform: scale(1.05);
+}
+
+.content-box {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.content-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.email-info {
+  text-align: center;
+}
+
+.email-text {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.email-details-text {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.back-to-login-button {
+  margin-top: 1.5rem;
+  background-color: #0984e3;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-login-button:hover {
+  background-color: #067cc5;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+  .confirmation-text {
+    font-size: 1.5rem;
+  }
+
+  .content-box {
+    padding: 1.5rem;
+  }
+}

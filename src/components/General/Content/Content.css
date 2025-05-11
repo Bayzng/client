@@ -1,0 +1,394 @@
+/* Variables converted */
+:root {
+    --off-white: #F8FAFF;
+    --bright-pink: #F4157E;
+    --dull-pink: #CD106E;
+    --white: #fff;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  html,
+  body {
+    /* background: #12c2e9; */
+    /* background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9); */
+    /* background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); */
+    min-height: 100%;
+    /* font-family: "Open sans", sans-serif; */
+  }
+  
+  /* Container */
+  .wrap {
+    margin: 150px auto 30px;
+    position: relative;
+    width: 460px;
+    background-color: black;
+    /* background-image: url('../../../../assets/herobg.jpg'); */
+    border-radius: 15px;
+    padding: 272px 45px 30px;
+    box-shadow: 0 10px 40px hsla(0, 0, 0, 0.1);
+  }
+
+  .design {
+    position: absolute;
+    top: -10rem;
+    left: 65rem;
+  }
+
+  .design img {
+    width: 20rem;
+  }
+
+  .designtwo {
+    position: absolute;
+    left: 2rem;
+  }
+
+  .designtwo img {
+    width: 20rem;
+  }
+  
+  /* Confirmation */
+  .confirmation {
+    position: absolute;
+    top: 96px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: opacity 300ms ease 300ms;
+  }
+  
+  .confirmation.visible {
+    opacity: 1;
+  }
+  
+  .all-good {
+    display: block;
+    margin: 40px auto 0;
+    width: 60px;
+  }
+  
+  .apple-logo {
+    fill: var(--white);
+    display: block;
+    margin: 0 auto;
+    width: 80px;
+  }
+  
+  .path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+  }
+  
+  .path.circle {
+    animation: dash 0.9s ease-in-out;
+  }
+  
+  .path.line {
+    stroke-dashoffset: 1000;
+    animation: dash 0.9s 0.35s ease-in-out forwards;
+  }
+  
+  .path.check {
+    stroke-dashoffset: -100;
+    animation: dash-check 0.9s 0.35s ease-in-out forwards;
+  }
+  
+  /* p {
+    text-align: center;
+    margin: 20px 0 60px;
+    font-size: 1.25em;
+  }
+  
+  p.success {
+    color: #777;
+  } */
+  
+  @keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  @keyframes dash-check {
+    0% {
+      stroke-dashoffset: -100;
+    }
+    100% {
+      stroke-dashoffset: 900;
+    }
+  }
+  
+  /* Buttons */
+  .button-cnt {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+  
+  .btn {
+    border: none;
+    position: absolute;
+    height: 64px;
+    z-index: 2;
+    top: 300px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 150ms ease;
+    outline: none !important;
+  }
+  
+  .primary-cta {
+    background: var(--bright-pink);
+    border-radius: 10px;
+    box-shadow: 0 10px 60px -10px var(--dull-pink);
+    color: white;
+    padding: 0 24px;
+    pointer-events: auto;
+    width: 250px;
+    z-index: 9;
+    transition: all 150ms ease;
+    will-change: transform, box-shadow, background;
+  }
+  
+  .primary-cta.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .secondary-cta {
+    background: var(--bright-pink);
+    border-radius: 10px;
+    padding: 0 24px;
+    pointer-events: auto;
+    width: 150px;
+    z-index: 9;
+    transition: all 150ms ease;
+    will-change: transform, box-shadow, background;
+    position: relative;
+  }
+  
+  .secondary-cta--done {
+    background: transparent;
+    color: var(--bright-pink);
+  }
+  
+  .secondary-cta--send {
+    border: 1px solid var(--bright-pink);
+    box-shadow: 0 10px 60px -10px var(--dull-pink);
+    color: var(--white);
+  }
+  
+  .secondary-cta.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Form */
+  .form fieldset {
+    border: none;
+    padding: 10px 0;
+  }
+  
+  .form fieldset label {
+    display: inline-block;
+    color: #444;
+    font-size: 12px;
+    padding: 4px;
+    margin: 5px;
+  }
+  
+  .form fieldset input {
+    background-color: var(--white);
+    width: 100%;
+    height: 38px;
+    color: #000;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none !important;
+    border: 1px solid hsla(0, 0, 0, 0.3);
+    position: absolute;
+    right: 24px;
+    box-shadow: inset 0 1px 4px hsla(0, 0, 0, 0.2);
+  }
+  
+  .form fieldset input.input-card-info {
+    display: inline-block;
+    width: 300px;
+  }
+  
+  .form fieldset input.input-card-info--lg {
+    height: 80px;
+  }
+  
+  .form fieldset .select {
+    position: relative;
+  }
+  
+  .form fieldset .select::after {
+    content: "";
+    border-top: 8px solid #222;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    position: absolute;
+    z-index: 2;
+    top: 14px;
+    right: 10px;
+    pointer-events: none;
+  }
+  
+  .form fieldset .select select {
+    appearance: none;
+    position: absolute;
+    padding: 0;
+    border: none;
+    width: 100%;
+    outline: none !important;
+    top: 6px;
+    left: 6px;
+    background: none;
+  }
+  
+  .form fieldset .select select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+  }
+  
+  /* Gift Card */
+  .gift-card-box {
+    perspective: 1000;
+    width: 400px;
+    height: 280px;
+    position: absolute;
+    top: -112px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .gift-card-box .flip {
+    transform: rotateY(180deg);
+  }
+  
+  .gift-card-box .front {
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/341817/imitation_apple_design1.jpg');
+    background-size: contain;
+  }
+  
+  .gift-card-box .front,
+  .gift-card-box .back {
+    width: 400px;
+    height: 250px;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    position: absolute;
+    color: #fff;
+    font-family: sans-serif;
+    top: 0;
+    left: 0;
+    box-shadow: 0 1px 6px hsla(0, 0, 0, 0.3);
+  }
+  
+  .gift-card-box .back {
+    background: linear-gradient(269.85deg, #F23C2D 1.71%, #F8A80C 99.93%);
+    transform: rotateY(180deg);
+  }
+  
+  .gift-card-box .card {
+    transition: 600ms;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: all 1s ease-in-out;
+  }
+  
+  .gift-card-box .card.whoosh {
+    animation: whooshAnimation 2400ms;
+  }
+  
+  @keyframes whooshAnimation {
+    0% {}
+    50% {
+      transform: translateY(-150vh);
+    }
+    75% {
+      transform: translateX(150vw);
+    }
+    100% {}
+  }
+  
+  .gift-card-box .front-logo-cnt {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .gift-card-box .font-logo {
+    width: 300px;
+  }
+  
+  .gift-card-box .card-description {
+    font-family: sans-serif;
+    line-height: 1.4;
+    text-align: center;
+  }
+  
+  .gift-card-box .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+  }
+  
+  .card {
+    transition: opacity 0.6s ease;
+    opacity: 1;
+  }
+  
+  .card.hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .card.visible {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  
+  .confirmation {
+    text-align: center;
+    margin-top: 20px;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .success {
+    font-size: 1.2rem;
+    color: green;
+    font-weight: bold;
+  }
+  
+  .card-front-text {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .card-front-text h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  }
+  

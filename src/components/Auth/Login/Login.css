@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+.logCon {
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.inputCon {
+  background-color: white;
+  width: 30rem;
+  padding: 30px;
+  height: 40rem;
+  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.75);
+  border-radius: 25px;
+  }
+  
+  .inputCon h2 {
+  margin-top: 3rem;
+  font-family: "Alfa Slab One", serif;
+  font-weight: 400;
+  color: #f4803a;
+  font-style: normal;
+}
+
+.inputBox {
+  margin-top: 2rem;
+}
+
+.logText {
+  margin-top: 2rem;
+}
+
+.logText p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.logText h3 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}
+
+.form {
+  margin-top: 2rem;
+}
+
+.formColumn {
+  margin-bottom: 1.2rem;
+}
+
+.formColumn label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.formColumn input {
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.form button {
+  background-color: #f4803a;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.logIn {
+  margin-top: 2rem;
+}
+
+.logIn p {
+  margin-top: 10px;
+}
+
+.logIn a {
+  color: #f4803a;
+}
+
+.logImg {
+  margin-left: 2rem;
+}
+
+.logImg img {
+  width: 40rem;
+}

@@ -21,7 +21,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchGiftCards = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/giftcards');
+        const response = await axios.get('https://server-qfe7.onrender.com/api/giftcards');
         setGiftCards(response.data);
       } catch (error) {
         console.error('Error fetching gift cards:', error);

@@ -14,7 +14,7 @@ const RedeemGiftcard = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await axios.post('http://localhost:3000/api/giftcards/redeem', { code, currentAccount });
+      const response = await axios.post('https://server-qfe7.onrender.com/api/giftcards/redeem', { code, currentAccount });
       const { amount } = response.data;
       await addFundsToWallet(amount);
       setRedeemed(true);

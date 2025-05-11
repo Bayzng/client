@@ -3,7 +3,7 @@ import axios from "axios";
 import { useRecoilValue } from "recoil";
 
 
-const BASE_URL = "http://localhost:3000/";
+const BASE_URL = "https://server-qfe7.onrender.com/";
 
 
  const axiosInstance = axios.create({

@@ -24,7 +24,7 @@ const CreateGiftCard = () => {
     e.preventDefault();
     const giftCard = { amount, senderEmail, recipientEmail, message };
     try {
-      await axios.post("http://localhost:3000/api/giftcards/create", giftCard);
+      await axios.post("https://server-qfe7.onrender.com/api/giftcards/create", giftCard);
       addGiftCard(giftCard);
       toast({
         title: "Gift card created.",
